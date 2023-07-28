@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+a{
+  text-decoration: none;
+}
+a.navbar-brand {
+  color: #203991;
+}
+a.nav-link {
+  color: #abacaf;
+}
+a.nav-link.active {
+  color: #203991 !important;
+  font-weight: 500;
+}
+.main-color {
+  color: #203991;
+}
+.sec-color {
+  color: #a7a4a4;
+}
+.main-heading p {
+  text-transform: capitalize;
+}
+.head-row th {
+  color: #203991 !important;
+  background: #f5f5f5 !important;
+}
+th {
+  color: #203991 !important;
+}
+td {
+  color: #a7a4a4 !important;
+}
+tr {
+  height: 50px;
+}
+/* .edit-icon {
+  color: #203991 !important;
+} */
+/* .dlt-icon {
+  color: #df1414 !important;
+} */
+.ad-btn {
+  border: none;
+  background: #008000 !important;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.edit-btn {
+  border: none;
+  background: #203991 !important;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.dlt-btn {
+  border: none;
+  background: #df1414 !important;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.btn-divs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btns {
+  width: 100px;
+}
+td input {
+  border: 1px solid #a7a4a4;
+}

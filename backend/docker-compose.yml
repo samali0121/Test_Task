@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+    # web:
+    #     build:
+    #         context: .
+    #     environment:
+    #         - NODE_ENV=development
+    #         - staging=true
+    #         - PORT=3000
+    #     command: npm start
+    #     volumes:
+    #         - .:/myapp
+    #     ports:
+    #         - "0.0.0.0:7777:3000"
+    #     networks:
+    #         - dev-network
+    # links:
+    #     - pgsql
+    #     - redis
+    # depends_on:
+    #     - pgsql
+    #     - redis
+    pgsql:
+        image: postgres:14.7
+        volumes:
+            - ./db:/var/lib/postgresql/pgdata
+            # - ./postgres-initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+
+        ports:
+          - "7778:5432"
+        networks:
+            - dev-network
+        environment:
+            POSTGRES_USER: docker
+            POSTGRES_PASSWORD: docker
+            POSTGRES_DB: CRUD
+
+    # redis:
+    #     image: redis:latest
+    #     user: redis
+    #     networks:
+    #         - dev-network
+    #     ports:
+    #         - "0.0.0.0:7779:6379"
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 9090:8080
+
+
+networks:
+    dev-network: 
+        driver: bridge
+
+volumes:
+    myapp:
+        external: true
+
+
+
